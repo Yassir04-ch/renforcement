@@ -1,34 +1,16 @@
-let fruits = ["orange", "banane", "pomme"]
-console.log(fruits[1]);
-fruits.push("violet")
-console.log(fruits.length);
 
-let personne = {
-    nom: "alice",
-    age: 25,
-    ville: "paris"
-}
+let mumber = ["yassir", "anas", "said", "samir", "amine", "salah"];
 
-console.log(personne.nom);
+console.log(mumber);
+console.log (mumber[0]);
+console.log (mumber[mumber.length - 1]);
+console.log(mumber.length);
 
-let animaux = ['animaux1', 'animaux2', 'animaux3', 'animaux4','animaux5']
-for (let i = 0; i < animaux.length; i++) {
-    console.log(animaux[i]);
-}
+mumber.push("aymane", "hassan");
 
-let cours = [
-    {
-        nom: 'math',
-        prix: 150
-    },
-     {
-        nom: 'physique',
-        prix: 150
-    }
-]
-let total = 0
-for (let i = 0; i < cours.length; i++) {
-    total += cours[i].prix
-}
+let suprimer = mumber.pop();
+console.log(suprimer);
 
-console.log(total);
+mumber.shift();
+
+console.log("List", mumber);
