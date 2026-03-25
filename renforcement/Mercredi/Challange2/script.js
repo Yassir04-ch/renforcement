@@ -47,4 +47,40 @@ for (let i = 0; i < stock.length; i++) {
 }
 console.log(valeur);
 
- 
+
+// 5
+function commander(plat) {
+  let manque = [];
+
+  for (let i = 0; i < plat.length; i++) {
+    let rep = plat[i];
+    let stockfind = stock.find(e => e.nom === rep.nom);
+    if (!stockfind || stockfind.quantite < rep.quantite) {
+       manque.push(rep.nom);
+    }
+  }
+
+  if (manque.length > 0) {
+    console.log("stock redients manquant: " + manque);
+  } else {
+    for (let i = 0; i < plat.length; i++) {
+      let rep = plat[i];
+      let stockfind = stock.find(i => i.nom === rep.nom);
+      stockfind.quantite -= rep.quantite;
+    }
+    console.log("commande effectuee");
+  }
+}
+
+
+// 6
+let stockfilter = stock.filter(e => e.quantite < e.seuil_alerte);
+let courses = {};
+for (let i = 0; i < stockfilter.length; i++) {
+  let nom = stockfilter[i].nom;
+   if (!courses[nom]) {
+    courses[nom] = 0;
+   }
+   courses[nom] = stockfilter[i].seuil_alerte * 2;
+}
+console.log(courses);
