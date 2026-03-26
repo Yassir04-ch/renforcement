@@ -100,7 +100,7 @@ annulerreservation(1);
 // 4
 function listreservations(date){
     let reservations = reservation.filter(e=>e.date == date);
-     reservations.sort((a,b)=>a.heure.localeCompare(b.heure));
+     reservations.sort((a,b)=>a.heure - b.heure);
       console.log(reservations);        
     
 }
