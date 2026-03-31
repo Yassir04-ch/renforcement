@@ -26,17 +26,17 @@ let result = eur * taux[deviseCible];
 return result;
  }
 
-// 3
-// function convertirpanier(panier, deviseSource, deviseCible){
-//      let result = [];
-//     for (let i = 0; i < panier.length; i++) { 
-//      let cover =   convertir(panier[i],deviseSource,deviseCible);
-//         result.push(cover);
-//     }
-//     console.log(result)
-// }
+3
+function convertirpanier(panier, deviseSource, deviseCible){
+    let result = [];
+    for (let i = 0; i < panier.length; i++) { 
+     let cover =   convertir(panier[i],deviseSource,deviseCible);
+        result.push(cover);
+    }
+    console.log(result)
+}
 
-// convertirpanier([3000, 1000, 200], "USD", "MAD");
+convertirpanier([3000, 1000, 200], "USD", "MAD");
 
 
 
