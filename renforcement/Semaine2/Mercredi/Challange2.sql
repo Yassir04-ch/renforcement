@@ -5,7 +5,7 @@
  );
  
  CREATE TABLE utilisateurs (
-    id INT AUTOINCREMANT PRIMARY KEY,
+    id INT AUTO_INCREMANT PRIMARY KEY,
     firstname VARCHAR(100) NOT NULL,
     lastname VARCHAR(100) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
@@ -17,13 +17,13 @@
 );
 
 CREATE TABLE categories (
-    id  INT AUTOINCREMANT  PRIMARY KEY,
+    id  INT AUTO_INCREMANT  PRIMARY KEY,
     nom VARCHAR(100) ,
     description VARCHAR(255)
 );
 
 CREATE TABLE cours(
-    id INT AUTOINCREMANT PRIMARY KEY?
+    id INT AUTO_INCREMANT PRIMARY KEY?
     titre VARCHAR(100)?
     price float,
     description VARCHAR(255),
@@ -35,7 +35,7 @@ CREATE TABLE cours(
 );
 
 CREATE TABlE avis(
-    id INT AUTOINCREMANT PRIMARY KEY?
+    id INT AUTO_INCREMANT PRIMARY KEY?
     note INT,
     comment VARCHAR(255)
     cour_id INT  NOT NULL,
@@ -45,14 +45,14 @@ CREATE TABlE avis(
 );
 
 CREATE TABLE modules(
-    id INT AUTOINCREMANT PRIMARY KEY,
+    id INT AUTO_INCREMANT PRIMARY KEY,
     titre VARCHAR(255) NOT NULL,
     cours_id INT  NOT NULL,
     FOREIGN KEY (cours_id) REFERENCES cours(id)
  );
 
  CREATE TABLE lecons (
-    id INT AUTOINCREMANT PRIMARY KEY,
+    id INT AUTO_INCREMANT PRIMARY KEY,
     titre VARCHAR(255) NOT NULL,
     type VARCHAR(30),
     module_id INT NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE modules(
 );
 
 CREATE TABLE inscription (
-    id INT AUTOINCREMANT PRIMARY KEY,
+    id INT AUTO_INCREMANT PRIMARY KEY,
     date_inscription TIMESTAMP,
     apprenant_id  INT NOT NULL,
     cours_id INT NOT NULL,
