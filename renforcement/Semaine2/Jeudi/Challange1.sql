@@ -41,3 +41,9 @@ JOIN livres l ON l.id = v.livre_id
 GROUP BY mois 
 ORDER BY mois DESC;
 
+
+
+-- 8
+SELECT l.annee_publication , l.titre,  g.nom  , l.prix , AVG(l.prix) as moyen FROM livre l
+JOIN genres g ON g.id = l.genre_id 
+WHERE l.annee_publication >2020 AND l.prix > moyen
