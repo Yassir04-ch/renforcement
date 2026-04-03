@@ -33,5 +33,17 @@ LIMIT 1;
 
 
 -- 6
+SELECT pr.medicament , pr.posologie , c.diagnostic , m.nom , p.nom FROM prescriptions pr
+JOIN consultations c ON c.id = pr.consultation_id
+JOIN medecins m ON m.id = c.medecin_id
+JOIN patients p ON p.id = c.patient_id
+GROUP BY m.nom;
 
 
+
+-- 7
+SELECT m.specialite , COUNT(c.id) as total FROM medecins m
+JOIN consultations c ON c.medecin_id = m.id
+GROUP BY  m.specialite
+ORDER BY total DESC
+LIMIT 1;
