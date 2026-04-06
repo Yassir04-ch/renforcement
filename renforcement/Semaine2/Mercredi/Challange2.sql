@@ -1,6 +1,6 @@
  
  CREATE TABlE role(
-    id INT AUTOINCREMANT PRIMARY KEY,
+    id INT AUTO_INCREMANT PRIMARY KEY,
     name VARCHAR(50),
  );
  
@@ -56,7 +56,7 @@ CREATE TABLE modules(
     titre VARCHAR(255) NOT NULL,
     type VARCHAR(30),
     module_id INT NOT NULL,
-   FOREIGN KEY (module_id) REFERENCES modules(id) ON DELETE CASCADE,
+    FOREIGN KEY (module_id) REFERENCES modules(id) ON DELETE CASCADE,
 );
 
 CREATE TABLE inscription (
