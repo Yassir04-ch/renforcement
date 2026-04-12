@@ -19,4 +19,4 @@ SELECT v.nom, SUM(b.prix) AS total FROM voyageurs v
 JOIN billets b ON b.voyageur_id = v.id
 GROUP BY v.id, v.nom
 ORDER BY total DESC
-LIMIT 1 OFFSET 1;
+LIMIT 1 OFFSET 2;
