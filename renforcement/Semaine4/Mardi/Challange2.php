@@ -52,6 +52,9 @@ class Logging{
 
 
 
+
+
+
 Logging::ajoutermessage("INFO", "application démarré");
 Logging::ajoutermessage("ERROR", "connexion échoué");
 Logging::ajoutermessage("WARNING", "mémoire faible");
@@ -62,3 +65,27 @@ print_r(Logging::filterNiveau('ERROR'));
 
 echo Logging::countErrur()."\n";
 echo Logging::exporter();
+
+
+
+
+class Compteur 
+{
+    private static $count = 0;
+
+    public function __construct()
+    {
+        self::$count++;
+    }
+
+    public static function getCount()
+    {
+        return self::$count;
+    }
+
+}
+$compteur1= new Compteur();
+$compteur2 = new Compteur();
+$compteur3 = new Compteur();
+
+echo Compteur::getCount();
